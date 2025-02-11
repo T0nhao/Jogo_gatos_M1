@@ -2,7 +2,6 @@ var config = {
     type: Phaser.AUTO,
     width: 924,
     height: 520,
-    parent: "game-container", // Ensure the game is attached to a container
     scene: {
         preload: preload,
         create: create,
@@ -15,13 +14,9 @@ var rato;
 
 // function preload carrega as imagens
 function preload() {
-    this.load.spritesheet("rato", "assets/bichos/rato.png", {
-        frameWidth: 384,
-        frameHeight: 537,
-    }); // rato que se movimentará
-    this.load.image("fundo", "assets/bg/grama.png"); // fundo do jogo
+    this.load.spritesheet("rato", "assets/bichos/rato.png", { frameWidth: 384,frameHeight: 537,}); // rato que se movimenta
+    this.load.image("fundo", "assets/fundos/grama.png"); // fundo do jogo
 }
-
 // function create vai adicionar essas imagens ao jogo
 function create() {
     this.add.image(462, 260, "fundo"); // coloca o fundo
