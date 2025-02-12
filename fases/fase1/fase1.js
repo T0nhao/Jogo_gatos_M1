@@ -35,6 +35,7 @@ function create() {
     });
     rato.anims.play("andar", true); // Aqui aciona a animação
 }
+
 //Aqui da instruções repetitivas para onde o cado deve se movimentar
 function update() {
     if (rato.x === 100) {
